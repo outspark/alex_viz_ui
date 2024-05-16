@@ -1,0 +1,548 @@
+{
+    "arguments": {
+        "nodes": [
+            {
+                "node_id": "mc00001",
+                "node_type": "main_claim",
+                "role": "defense",
+                "label": "MC_01",
+                "text": "피고인 B는 에어비트클럽의 실체와 ‘에어봇’ 프로그램의 기능에 대해 정확히 알지 못한 채, 제공된 정보를 바탕으로 성실히 판매 활동을 했을 뿐, 투자자들을 기망할 의도가 없었다.",
+                "label_expanded": "MC_01"
+            },
+            {
+                "node_id": "-mc00001",
+                "node_type": "main_claim",
+                "role": "prosecution",
+                "label": "MC_01",
+                "text": "피고인 B는 에어비트클럽의 실질적인 수익 창출 능력에 대한 명확한 증거 없이 고수익을 보장한다고 광고하여 투자자들을 기망하였고, 이로 인해 투자자들로부터 거액을 편취하는 등 사기 범죄의 주요 요소를 모두 충족한다.",
+                "label_expanded": "MC_01"
+            },
+            {
+                "node_id": "c00001",
+                "node_type": "claim",
+                "role": "defense",
+                "label": "C_01",
+                "text": " 피고인 B는 에어비트클럽의 비즈니스 모델과 ‘에어봇’ 프로그램의 기능에 대한 정보를 정확히 제공받지 못했다.",
+                "label_expanded": "C_01"
+            },
+            {
+                "node_id": "w00001",
+                "node_type": "warrant",
+                "role": "defense",
+                "label": "W_01",
+                "text": " 제공된 정보의 정확성과 완전성이 부족하면, 그 정보를 바탕으로 한 활동은 오해의 소지가 있으며, 이는 고의적 기망 행위와 구별된다.",
+                "label_expanded": "D_01=>C_01"
+            },
+            {
+                "node_id": "d00001",
+                "node_type": "datum",
+                "role": "defense",
+                "label": "D_01",
+                "text": " ‘에어봇’이라는 프로그램 또한 실체가 확인되지 않으며, 에어비트클럽은 파나마 본사의 소재지나 연락처조차 파악되지 않아 실체가 불분명한 회사였다.",
+                "label_expanded": "D_01"
+            },
+            {
+                "node_id": "c00002",
+                "node_type": "claim",
+                "role": "defense",
+                "label": "C_02",
+                "text": " 피고인 B는 투자자들에게 고수익을 보장한다고 주장한 것이 아니라, 에어비트클럽이 제시한 가능성을 전달했을 뿐이다.",
+                "label_expanded": "C_02"
+            },
+            {
+                "node_id": "w00002",
+                "node_type": "warrant",
+                "role": "defense",
+                "label": "W_02",
+                "text": " 투자 설명 시 제시된 수익 가능성은 회사에서 제공한 정보를 기반으로 한 것이며, 이는 피고인이 독자적으로 수익을 보장하겠다고 약속한 것과는 다르다.",
+                "label_expanded": "D_02=>C_02"
+            },
+            {
+                "node_id": "d00002",
+                "node_type": "datum",
+                "role": "defense",
+                "label": "D_02",
+                "text": " 피고인 B은 “투자자가 지급한 금원은 비트코인 형태로 파나마에 있는 에어비트클럽 본사에 송금되고, 본사에서는 에어봇을 이용하여 비트코인이 저렴한 국가에서 비트코인을 구입해서 비싼 국가에 되팔아 수익을 내고 있기 때문에 에어비트클럽에 투자하면 고액의 수익을 얻을 수 있고 손해가 날 일이 없다.”고 설명하였다.",
+                "label_expanded": "D_02"
+            },
+            {
+                "node_id": "c00003",
+                "node_type": "claim",
+                "role": "defense",
+                "label": "C_03",
+                "text": " 피고인 B는 지속적으로 투자자들을 유치하기 위한 목적보다는, 제공받은 정보를 바탕으로 성실하게 판매 활동을 수행했다.",
+                "label_expanded": "C_03"
+            },
+            {
+                "node_id": "w00003",
+                "node_type": "warrant",
+                "role": "defense",
+                "label": "W_03",
+                "text": " 피고인이 투자자들에게 정보를 제공하는 과정에서 의도적으로 기망하려는 목적이 아닌, 회사에서 제공한 정보와 판매 지침에 따른 것이라면, 이는 고의적인 사기 행위와 구별되어야 한다.",
+                "label_expanded": "D_03=>C_03"
+            },
+            {
+                "node_id": "d00003",
+                "node_type": "datum",
+                "role": "defense",
+                "label": "D_03",
+                "text": " 피고인 B은 다단계 수당에 관하여 “하위 판매원을 모집하여 매출을 하게 되면 추천수당으로 투자금의 20%를 받고, 산하에 순차적으로 하위 판매원들을 모집하여 매출이 생기면 정해진 기준에 따라 산하 좌우 실적 중 소실적을 기준으로 소실적에서 투자받은 금액의 10%를 후원수당으로 지급받을 수 있다.”고 설명하였다.",
+                "label_expanded": "D_03"
+            },
+            {
+                "node_id": "c00004",
+                "node_type": "claim",
+                "role": "prosecution",
+                "label": "C_04",
+                "text": " 피고인 B는 투자자들에게 에어비트클럽의 비현실적인 수익률을 약속하여 사기를 저질렀다.",
+                "label_expanded": "C_04"
+            },
+            {
+                "node_id": "w00004",
+                "node_type": "warrant",
+                "role": "prosecution",
+                "label": "W_04",
+                "text": " 투자 설명회에서 투자자들에게 고수익을 보장하는 것은 그들을 기망하여 투자금을 모집하는 전형적인 사기 행위의 방법이다.",
+                "label_expanded": "D_04=>C_04"
+            },
+            {
+                "node_id": "d00004",
+                "node_type": "datum",
+                "role": "prosecution",
+                "label": "D_04",
+                "text": " \"투자자가 지급한 금원은 비트코인 형태로 파나마에 있는 에어비트클럽 본사에 송금되고, 본사에서는 에어봇을 이용하여 비트코인이 저렴한 국가에서 비트코인을 구입해서 비싼 국가에 되팔아 수익을 내고 있기 때문에 에어비트클럽에 투자하면 고액의 수익을 얻을 수 있고 손해가 날 일이 없다.\"고 말하였다는 점에서 확인된다.",
+                "label_expanded": "D_04"
+            },
+            {
+                "node_id": "c00005",
+                "node_type": "claim",
+                "role": "prosecution",
+                "label": "C_05",
+                "text": " 피고인 B는 에어비트클럽의 실체가 불분명함에도 불구하고 투자를 유치하였다.",
+                "label_expanded": "C_05"
+            },
+            {
+                "node_id": "w00005",
+                "node_type": "warrant",
+                "role": "prosecution",
+                "label": "W_05",
+                "text": " 회사의 실체가 불분명하거나, 소재지나 연락처조차 파악되지 않는 회사에 대한 투자를 유치하는 것은 투자자들을 기망하는 행위로 볼 수 있다.",
+                "label_expanded": "D_05=>C_05"
+            },
+            {
+                "node_id": "d00005",
+                "node_type": "datum",
+                "role": "prosecution",
+                "label": "D_05",
+                "text": " \"그러나 사실 에어비트클럽은 파나마 본사의 소재지나 연락처조차 파악되지 않아 실체가 불분명한 회사이고, ‘에어봇’이라는 프로그램 또한 실체가 확인되지 않으며\"라는 사실에서 확인된다.",
+                "label_expanded": "D_05"
+            },
+            {
+                "node_id": "c00006",
+                "node_type": "claim",
+                "role": "prosecution",
+                "label": "C_06",
+                "text": " 피고인 B는 피해자들로부터 거액을 편취하였다.",
+                "label_expanded": "C_06"
+            },
+            {
+                "node_id": "w00006",
+                "node_type": "warrant",
+                "role": "prosecution",
+                "label": "W_06",
+                "text": " 피해자들로부터 대규모 투자금을 수령한 후 이를 제대로된 수익 창출 없이 다른 용도로 사용하는 것은 사기 범죄에 해당한다.",
+                "label_expanded": "D_06=>C_06"
+            },
+            {
+                "node_id": "d00006",
+                "node_type": "datum",
+                "role": "prosecution",
+                "label": "D_06",
+                "text": " \"별지 범죄일람표1 기재와 같이 위 일시경부터 2018. 3. 8.경까지 사이에 총 995회에 걸쳐 피해자들로부터 투자금 명목으로 합계 6,215,394,500원을 교부받아 편취하였다\"는 사실에서 확인된다.",
+                "label_expanded": "D_06"
+            },
+            {
+                "node_id": "c00007",
+                "node_type": "claim",
+                "role": "defense",
+                "label": "C_07",
+                "text": " 피고인 B는 에어비트클럽의 비현실적 수익률을 약속한 것이 아니라, 회사에서 제공한 정보를 바탕으로 투자자들에게 전달한 것이다.",
+                "label_expanded": "C_07"
+            },
+            {
+                "node_id": "w00007",
+                "node_type": "warrant",
+                "role": "defense",
+                "label": "W_07",
+                "text": " 피고인이 제공한 정보는 에어비트클럽 본사로부터 제공받은 자료에 기반하였으며, 본인이 직접 조작하거나 과장하여 전달한 사실이 없다.",
+                "label_expanded": "D_07=>C_07"
+            },
+            {
+                "node_id": "d00007",
+                "node_type": "datum",
+                "role": "defense",
+                "label": "D_07",
+                "text": " \"투자자가 지급한 금원은 비트코인 형태로 파나마에 있는 에어비트클럽 본사에 송금되고, 본사에서는 에어봇을 이용하여 비트코인이 저렴한 국가에서 비트코인을 구입해서 비싼 국가에 되팔아 수익을 내고 있기 때문에 에어비트클럽에 투자하면 고액의 수익을 얻을 수 있고 손해가 날 일이 없다고 말하였다.\"는 점에서 확인된다.",
+                "label_expanded": "D_07"
+            },
+            {
+                "node_id": "c00008",
+                "node_type": "claim",
+                "role": "defense",
+                "label": "C_08",
+                "text": " 피고인 B는 투자자들에게 고위험을 알리지 않았다는 점을 부인한다.",
+                "label_expanded": "C_08"
+            },
+            {
+                "node_id": "w00008",
+                "node_type": "warrant",
+                "role": "defense",
+                "label": "W_08",
+                "text": " 투자와 관련된 모든 상품에는 일정 수준의 위험이 존재하며, 피고인은 투자자들이 이를 충분히 인지할 수 있도록 정보를 제공하였다.",
+                "label_expanded": "D_08=>C_08"
+            },
+            {
+                "node_id": "d00008",
+                "node_type": "datum",
+                "role": "defense",
+                "label": "D_08",
+                "text": " 피고인 B은 \"1,000달러(한화 약 130만 원 상당)를 투자하면 정회원이 될 수 있고, 정회원은 매일 4달러에서 12달러를 300회 지급받을 수 있다\"고 설명하면서도, 다단계 수당에 관하여 \"하위 판매원을 모집하여 매출을 하게 되면 추천수당으로 투자금의 20%를 받고, 산하에 순차적으로 하위 판매원들을 모집하여 매출이 생기면 정해진 기준에 따라 산하 좌우 실적 중 소실적을 기준으로 소실적에서 투자받은 금액의 10%를 후원수당으로 지급받을 수 있다.\"고 설명하였다는 점에서, 투자의 위험성을 어느 정도 전달하였음을 알 수 있다.",
+                "label_expanded": "D_08"
+            },
+            {
+                "node_id": "c00009",
+                "node_type": "claim",
+                "role": "defense",
+                "label": "C_09",
+                "text": " 피고인 B는 사기 의도가 없었으며, 오히려 피고인 자신도 에어비트클럽의 사업 모델을 신뢰하고 있었다.",
+                "label_expanded": "C_09"
+            },
+            {
+                "node_id": "w00009",
+                "node_type": "warrant",
+                "role": "defense",
+                "label": "W_09",
+                "text": " 피고인이 에어비트클럽의 사업 모델을 신뢰하고 있었으며, 이는 피고인이 투자자들에게 제공한 정보의 진실성을 믿고 있었다는 것을 의미한다.",
+                "label_expanded": "D_09=>C_09"
+            },
+            {
+                "node_id": "d00009",
+                "node_type": "datum",
+                "role": "defense",
+                "label": "D_09",
+                "text": " 에어비트클럽은 \"인공지능 프로그램인 ‘에어봇’을 이용한 비트코인 거래를 통해 수익을 창출하여 수익금을 지급할 것처럼 광고\"하는 회사로, 피고인 B는 이러한 정보를 바탕으로 투자자를 모집하였다. 피고인이 이 사업 모델에 대한 신뢰를 가지고 있었다는 사실은, 피고인이 투자자들에게 거짓 정보를 의도적으로 제공하려 했다는 주장과 모순된다.",
+                "label_expanded": "D_09"
+            },
+            {
+                "node_id": "c00010",
+                "node_type": "claim",
+                "role": "prosecution",
+                "label": "C_10",
+                "text": " 피고인 B가 에어비트클럽의 사업 모델에 대한 신뢰를 가지고 있었다 하더라도, 이것이 그들이 제공한 정보의 진실성을 보증하지 않는다.",
+                "label_expanded": "C_10"
+            },
+            {
+                "node_id": "w00010",
+                "node_type": "warrant",
+                "role": "prosecution",
+                "label": "W_10",
+                "text": " 피고인이 제공한 정보의 진실성은 해당 사업 모델의 실제 수익성과 소득 창출 능력에 기반해야 한다.",
+                "label_expanded": "D_10=>C_10"
+            },
+            {
+                "node_id": "d00010",
+                "node_type": "datum",
+                "role": "prosecution",
+                "label": "D_10",
+                "text": " 에어비트클럽은 \"실체가 불분명한 회사\"이며, \"'에어봇'이라는 프로그램 또한 실체가 확인되지 않았다\"고 하였다.",
+                "label_expanded": "D_10"
+            },
+            {
+                "node_id": "c00011",
+                "node_type": "claim",
+                "role": "prosecution",
+                "label": "C_11",
+                "text": " 피고인 B는 피해자들에게 고수익을 보장할 수 있다고 광고하였지만, 이러한 주장은 에어비트클럽의 실질적인 사업 운영 방식과 모순된다.",
+                "label_expanded": "C_11"
+            },
+            {
+                "node_id": "w00011",
+                "node_type": "warrant",
+                "role": "prosecution",
+                "label": "W_11",
+                "text": " 투자자들에게 제공된 정보가 실제 사업 모델의 운영 방식과 다르며, 투자자들을 기망하기 위한 명백한 의도로 해석될 수 있다.",
+                "label_expanded": "D_11=>C_11"
+            },
+            {
+                "node_id": "d00011",
+                "node_type": "datum",
+                "role": "prosecution",
+                "label": "D_11",
+                "text": " 에어비트클럽 사이트에서 표상되는 수익은 실제 경제적 가치가 없는 \"소위 '포인트'\"에 불과하며, \"투자자들로부터 받은 투자금 대부분은 파나마 본사에 송금하는 것이 아니라 수익금의 지급을 요청하는 선순위 투자자에게 지급하는 데 사용되고 있다\"고 하였다.",
+                "label_expanded": "D_11"
+            },
+            {
+                "node_id": "c00012",
+                "node_type": "claim",
+                "role": "prosecution",
+                "label": "C_12",
+                "text": " 피고인 B와 F의 공모를 통한 투자 설명회 운영은 사기 행위의 일환으로, 피고인들은 피해자들을 기망하여 투자금을 편취하였다.",
+                "label_expanded": "C_12"
+            },
+            {
+                "node_id": "w00012",
+                "node_type": "warrant",
+                "role": "prosecution",
+                "label": "W_12",
+                "text": " 피고인들이 제공한 정보와 실제 사업 운영의 괴리는 피고인들이 피해자들을 고의로 기망하여 이익을 취한 것으로 판단될 수 있다.",
+                "label_expanded": "D_12=>C_12"
+            },
+            {
+                "node_id": "d00012",
+                "node_type": "datum",
+                "role": "prosecution",
+                "label": "D_12",
+                "text": " 피고인 B는 \"2016. 9.경부터 울산 남구 H 부근에 있는 사무실 등지에서 불특정 다수인을 상대로\" 투자 설명회를 운영하였으며, 피해자 I로부터 \"2016. 9. 18.경 1,535,000원을 송금 받은 것을 비롯하여 별지 범죄일람표1 기재와 같이 위 일시경부터 2018. 3. 8.경까지 사이에 총 995회에 걸쳐 피해자들로부터 투자금 명목으로 합계 6,215,394,500원을 교부받아 편취하였다\"고 하였다.",
+                "label_expanded": "D_12"
+            }
+        ],
+        "edges": [
+            {
+                "from": "mc00001",
+                "to": "-mc00001",
+                "edge_type": "attack"
+            },
+            {
+                "from": "-mc00001",
+                "to": "mc00001",
+                "edge_type": "attack"
+            },
+            {
+                "from": "c00001",
+                "to": "mc00001",
+                "edge_type": "support"
+            },
+            {
+                "from": "w00001",
+                "to": "c00001",
+                "edge_type": "support"
+            },
+            {
+                "from": "d00001",
+                "to": "w00001",
+                "edge_type": "support"
+            },
+            {
+                "from": "c00002",
+                "to": "mc00001",
+                "edge_type": "support"
+            },
+            {
+                "from": "w00002",
+                "to": "c00002",
+                "edge_type": "support"
+            },
+            {
+                "from": "d00002",
+                "to": "w00002",
+                "edge_type": "support"
+            },
+            {
+                "from": "c00003",
+                "to": "mc00001",
+                "edge_type": "support"
+            },
+            {
+                "from": "w00003",
+                "to": "c00003",
+                "edge_type": "support"
+            },
+            {
+                "from": "d00003",
+                "to": "w00003",
+                "edge_type": "support"
+            },
+            {
+                "from": "c00004",
+                "to": "-mc00001",
+                "edge_type": "support"
+            },
+            {
+                "from": "w00004",
+                "to": "c00004",
+                "edge_type": "support"
+            },
+            {
+                "from": "d00004",
+                "to": "w00004",
+                "edge_type": "support"
+            },
+            {
+                "from": "c00005",
+                "to": "-mc00001",
+                "edge_type": "support"
+            },
+            {
+                "from": "w00005",
+                "to": "c00005",
+                "edge_type": "support"
+            },
+            {
+                "from": "d00005",
+                "to": "w00005",
+                "edge_type": "support"
+            },
+            {
+                "from": "c00006",
+                "to": "-mc00001",
+                "edge_type": "support"
+            },
+            {
+                "from": "w00006",
+                "to": "c00006",
+                "edge_type": "support"
+            },
+            {
+                "from": "d00006",
+                "to": "w00006",
+                "edge_type": "support"
+            },
+            {
+                "from": "c00007",
+                "to": "w00004",
+                "edge_type": "attack"
+            },
+            {
+                "from": "w00007",
+                "to": "c00007",
+                "edge_type": "support"
+            },
+            {
+                "from": "d00007",
+                "to": "w00007",
+                "edge_type": "support"
+            },
+            {
+                "from": "c00008",
+                "to": "w00004",
+                "edge_type": "attack"
+            },
+            {
+                "from": "w00008",
+                "to": "c00008",
+                "edge_type": "support"
+            },
+            {
+                "from": "d00008",
+                "to": "w00008",
+                "edge_type": "support"
+            },
+            {
+                "from": "c00009",
+                "to": "w00004",
+                "edge_type": "attack"
+            },
+            {
+                "from": "w00009",
+                "to": "c00009",
+                "edge_type": "support"
+            },
+            {
+                "from": "d00009",
+                "to": "w00009",
+                "edge_type": "support"
+            },
+            {
+                "from": "c00010",
+                "to": "w00009",
+                "edge_type": "attack"
+            },
+            {
+                "from": "w00010",
+                "to": "c00010",
+                "edge_type": "support"
+            },
+            {
+                "from": "d00010",
+                "to": "w00010",
+                "edge_type": "support"
+            },
+            {
+                "from": "c00011",
+                "to": "w00009",
+                "edge_type": "attack"
+            },
+            {
+                "from": "w00011",
+                "to": "c00011",
+                "edge_type": "support"
+            },
+            {
+                "from": "d00011",
+                "to": "w00011",
+                "edge_type": "support"
+            },
+            {
+                "from": "c00012",
+                "to": "w00009",
+                "edge_type": "attack"
+            },
+            {
+                "from": "w00012",
+                "to": "c00012",
+                "edge_type": "support"
+            },
+            {
+                "from": "d00012",
+                "to": "w00012",
+                "edge_type": "support"
+            }
+        ],
+        "extensions": {
+            "grounded": [
+                "d00012",
+                "w00011",
+                "c00011",
+                "w00001",
+                "c00001",
+                "w00002",
+                "c00002",
+                "d00004",
+                "d00001",
+                "w00012",
+                "c00012",
+                "w00005",
+                "c00005",
+                "w00006",
+                "c00006",
+                "d00005",
+                "w00003",
+                "c00003",
+                "d00011",
+                "d00007",
+                "w00008",
+                "c00008",
+                "d00002",
+                "d00003",
+                "w00010",
+                "c00010",
+                "d00010",
+                "d00006",
+                "d00009",
+                "d00008",
+                "w00007",
+                "c00007"
+            ]
+        }
+    },
+    "target_node": {
+        "node_id": "w00009",
+        "node_type": "warrant",
+        "role": "defense",
+        "label": "W_09",
+        "text": " 피고인이 에어비트클럽의 사업 모델을 신뢰하고 있었으며, 이는 피고인이 투자자들에게 제공한 정보의 진실성을 믿고 있었다는 것을 의미한다.",
+        "label_expanded": "D_09=>C_09"
+    },
+    "target_reason": "Explanation: w00009의 보증은 피고인 B가 에어비트클럽의 사업 모델을 신뢰하고 있었다는 것이 사기 의도가 없었다는 것을 의미한다고 주장하지만, 이는 논리적 연결이 약합니다. 단순히 사업 모델을 신뢰한다고 해서 그것이 피고인의 사기 의도가 없었다는 것을 증명하지는 않습니다. 사기 의도의 유무는 피고인의 내부적 신념이나 태도뿐만 아니라, 그가 제공한 정보의 진실성, 그리고 투자자들에게 제공한 정보의 성격과 그 정보를 제공한 맥락 등 다양한 요소를 고려해야 합니다. 따라서, 이 보증은 피고인의 의도와 실제 행위 사이의 논리적 연결을 충분히 설명하지 못하며, 주장을 뒷받침하기에 충분한 논리적 근거를 제공하지 못합니다.",
+    "current_role": "prosecution"
+}
