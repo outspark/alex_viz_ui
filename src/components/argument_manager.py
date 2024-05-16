@@ -50,10 +50,13 @@ class ArgumentManager:
             return {"success": False, "data": {"arguments": {"nodes": [], "edges": [], "extensions": {}}, "target_node": {}, "target_reason": ""}}
     
     def _setup_toolbox(self):
-        toolbox = self._parent_container.expander(":wrench: Argument Toolbox ")
+        toolbox = self._parent_container.expander(":wrench: Argument Toolbox ", expanded=True)
         with toolbox:
             self.generation_rounds = st.number_input(":triangular_flag_on_post: Generation Rounds ", min_value=1, max_value=3, value=1, step=1, key="generation_rounds")           
             st.markdown(f":speech_balloon: Next Speaker  `{self.current_role.capitalize()}`")   
+            
+
+                
             # self.user_input = st.text_input("Your message", key="user_input")
 
     def _setup_manager(self):
@@ -79,35 +82,62 @@ class ArgumentManager:
 
     def _handle_analysis(self):
         logger.info(f"Analysis button clicked")
-        input_data = st.session_state['document_text']
-        extension_data = st.session_state['extension_selection']
+        
+        ## NOTE: For alex viz ui 
+        current_round_number = st.session_state['round_number']
+        current_round_number += self.generation_rounds
+        if current_round_number > 5:    
+            st.session_state['round_number'] = 5
+            st.toast("마지막 라운드입니다.")
+            time.sleep(1)
+        else:
+            st.session_state['round_number'] = current_round_number
+            
+            attack_mode = {
+                1: "지지 생성",
+                2: "피고인/변호인 공격",
+                3: "검사/수사관 공격",
+                4: "피고인/변호인 공격",
+                5: "검사/수사관 공격",
+            }
+            
+            st.toast(f"라운드 {current_round_number}로 이동합니다.")
+            time.sleep(.5)
+            st.toast(f"현재 모드: {attack_mode[current_round_number]}")
+            time.sleep(2)
+        
+        
+        self.load_from_file()
+        # NOTE: TEmporary comment out
+        # input_data = st.session_state['document_text']
+        # extension_data = st.session_state['extension_selection']
 
-        in_progress = True
-        start_time = time.time()
+        # in_progress = True
+        # start_time = time.time()
 
-        with self._spinner_placeholder, st.spinner("Processing..."):
+        # with self._spinner_placeholder, st.spinner("Processing..."):
             
-            result = self._get_arguments(input_data, extension_data)
+        #     result = self._get_arguments(input_data, extension_data)
             
-            end_time = time.time()
+        #     end_time = time.time()
             
-            operation_time = end_time - start_time
-            st.success(f"Operation finished in {operation_time:.2f}s.")
+        #     operation_time = end_time - start_time
+        #     st.success(f"Operation finished in {operation_time:.2f}s.")
 
-        # result = self._get_arguments("test") #receive query from user
-        if result['success'] == True:
-            st.session_state['arguments'] = result['data']['arguments']
-            target_node =  result['data']['target_node']
-            if target_node:
-                st.session_state['target_node_id'] = target_node['node_id']
-            st.session_state['target_reason'] = result['data']['target_reason']
+        # # result = self._get_arguments("test") #receive query from user
+        # if result['success'] == True:
+        #     st.session_state['arguments'] = result['data']['arguments']
+        #     target_node =  result['data']['target_node']
+        #     if target_node:
+        #         st.session_state['target_node_id'] = target_node['node_id']
+        #     st.session_state['target_reason'] = result['data']['target_reason']
             
-            # Switch roles
-            prev_role = result['data']['current_role']
-            next_role = "defense" if prev_role == "prosecution" else "prosecution"
-            logger.info(f"Switching roles from {prev_role} to {next_role}")
-            st.session_state['selected_role'] = next_role
-            st.rerun()
+        #     # Switch roles
+        #     prev_role = result['data']['current_role']
+        #     next_role = "defense" if prev_role == "prosecution" else "prosecution"
+        #     logger.info(f"Switching roles from {prev_role} to {next_role}")
+        #     st.session_state['selected_role'] = next_role
+        #     st.rerun()
             
     def _handle_clear(self):
         logger.info(f"Clear button clicked")
@@ -182,3 +212,19 @@ class ArgumentManager:
                 # delete_button = right.button("❌", key=f"del_{i}")
                 # if delete_button:
                 #     self._delete_node(msg["node_id"])
+        
+    
+    def load_from_file(self):
+        round_number = st.session_state['round_number'] 
+        file_path = f"src/static/data/R{round_number:02d}_AirBot_Ponzi.json"
+        with open(file_path, "r", encoding="utf-8") as f: 
+            data = json.load(f)
+            if data:
+                st.session_state['document_text'] = data.get('crime_fact','')
+                st.session_state['arguments'] = data['arguments']
+                target_node = data['target_node']
+                if target_node:
+                    st.session_state['target_node_id'] = target_node['node_id']
+                st.session_state['target_reason'] = data['target_reason']
+                st.session_state['selected_role'] = data['current_role']
+                st.rerun()

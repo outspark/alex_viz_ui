@@ -27,6 +27,9 @@ class DataManager:
             
         if 'selected_role' not in st.session_state:
             st.session_state['selected_role'] = 'defense'
+            
+        if 'round_number' not in st.session_state:
+            st.session_state['round_number'] = 0
 
     def get_target_node(self):
         if st.session_state['target_node_id']:
@@ -81,3 +84,4 @@ class DataManager:
         st.session_state['target_node_id'] = ''
         st.session_state['target_reason'] = ''
         st.session_state['selected_role'] = 'defense'
+        st.session_state['round_number'] = 0

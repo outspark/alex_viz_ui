@@ -9,7 +9,9 @@ class DocumentViewer:
         self.parent_container = parent_container
         # self.api_endpoint = "http://localhost:8000/api/v0.1.0/test_case"
         # self.api_endpoint = "http://localhost:8000/api/v0.1.0/run_alex_viz"
-        self.setup()
+        
+        # NOTE: Temporary comment out  
+        # self.setup()
 
     def setup(self):
         file_upload_box = self.parent_container.expander("📂 Load Case From JSON")
@@ -41,4 +43,4 @@ class DocumentViewer:
                     st.session_state['target_reason'] = data['target_reason']
                     st.session_state['selected_role'] = data['current_role']
                     st.rerun()
-                
+    

@@ -22,7 +22,8 @@ class FormalVerifier:
         if self._clicked_node_id:
             clicked_node_label_expanded = self._data_manager.get_node(self._clicked_node_id).get("label_expanded", {})
         else:
-            clicked_node_label_expanded = "No node selected."            
+            clicked_node_label_expanded = "No node selected."   
+        st.markdown(f":triangular_flag_on_post: Round {st.session_state['round_number']}")         
         st.markdown(f"Clicked Node Formula: `{clicked_node_label_expanded}`")
 
     def _render_colored_text(self):
